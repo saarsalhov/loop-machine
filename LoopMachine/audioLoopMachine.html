@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Html5 Audio Loop Machine</title>
+</head>
+<body>
+
+<h1>My loop machine</h1>
+
+<!--Table that include all the channels and the buttons-->
+
+<table>
+    <tr bgcolor="#ffebcd" class="channel">
+        <td  class="channel">Song Name</td>
+        <td>Buttons</td>
+    </tr>
+    <tr bgcolor="aqua" class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0" step="1">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div class="songNames">All Track</div>
+            <audio id="allTrack" class="allAudios" >
+                <source class="songs" src="playlist/ALL%20TRACK.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#ff7f50" class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0" step="1">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>_tambourine_shake_higher</div>
+            <audio id="tamboAudio" class="allAudios" >
+                <source class="songs" src="playlist/_tambourine_shake_higher.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#a52a2a" class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>B VOC</div>
+            <audio id="bvoc" class="allAudios" >
+                <source class="songs" src="playlist/B%20VOC.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#7cfc00" class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>DRUMS</div>
+            <audio id="drums" class="allAudios" >
+                <source class="songs" src="playlist/DRUMS.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="fuchsia"  class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>HE HE VOC</div>
+            <audio id="hehevoc" class="allAudios" >
+                <source class="songs" src="playlist/HE%20HE%20VOC.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#bdb76b"  class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>HIGH VOC</div>
+            <audio id="highVoc" class="allAudios" >
+                <source class="songs" src="playlist/HIGH%20VOC.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#8fbc8f"  class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>JIBRISH</div>
+            <audio id="jibrish" class="allAudios" >
+                <source class="songs" src="playlist/JIBRISH.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#ffd700"  class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>LEAD 1</div>
+            <audio id="lead1" class="allAudios" >
+                <source class="songs" src="playlist/LEAD%201.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+    <tr bgcolor="#fffacd" class="channel">
+        <td>
+            <div class="slider-wrapper">
+                <span class="time">0:00</span>
+                <label>
+                    <input class="progress_bar" type="range" min="0" max="100" value="0">
+                </label>
+                <span class="endTime">0:00</span>
+            </div>
+            <div>UUHO VOC</div>
+            <audio id="uuhoVoc" class="allAudios" >
+                <source class="songs" src="playlist/UUHO%20VOC.mp3" type="audio/mpeg">
+            </audio>
+        </td>
+        <td>
+            <button class="playButton" type="button">Play Audio</button>
+            <button class="pauseButton" type="button">Pause Audio</button>
+            <label class="switch">
+                <input class="muteAudio" type="Checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span class="muteText" >Click to Mute</span>
+        </td>
+    </tr>
+</table>
+
+<!--end of the table-->
+
+
+<br>
+
+<!--The Buttons on the Bottom-->
+
+<div>
+    <button id="playAll" class="playAllButton" type="button">Play all channels</button>
+    <button id="pauseAll" class="pauseAllButton" type="button">Pause all channels</button>
+    <label class="switch">
+        <input id="loopCheckbox" type="Checkbox">
+        <span class="slider round"></span>
+    </label>
+    <span id="loopText">Click to enable loop</span>
+</div>
+
+<!--Link to the external JavaScript File-->
+
+<script src="audioFunctions.js"></script>
+
+
+</body>
+</html>
